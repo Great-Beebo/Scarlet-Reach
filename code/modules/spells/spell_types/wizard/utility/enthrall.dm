@@ -80,7 +80,7 @@
 		playsound(M, 'sound/magic/eora_bless.ogg', 50, TRUE)
 
 		if(M.mind)
-			M.mind.store_memory("I am entralled by means of a magic charm, and I must obey the commands of [user]. I am bound to their will utterly and totally, despite the fogged veil upon my mind. The nature of my charm has stunted my memory, and I am incapable of revealing sensitive information (such as the location of hidden bases or treasures.)")
+			M.mind.store_memory("I am entralled by means of a magic charm, and I must obey the commands of [user]. I am bound to their will utterly and totally -- a fogged veil upon my mind. The nature of my charm has stunted my memory, and I am incapable of revealing sensitive information (such as the location of hidden bases or treasures.)")
 			M.mind.add_special_person(user, "#CCCCFF")
 
 		M.faction |= "[REF(user)]"
