@@ -13,7 +13,7 @@
 	xp_gain = TRUE
 	action_icon_state = "spell0"
 
-	var/enthrall_delay = 15 SECONDS
+	var/enthrall_delay = 20 SECONDS
 	var/mob/living/current_victim = null  // Track current enthralled victim
 
 /obj/effect/proc_holder/spell/self/enthrall/cast(mob/user = usr)
