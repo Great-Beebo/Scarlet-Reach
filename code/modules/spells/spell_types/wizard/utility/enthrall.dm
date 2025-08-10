@@ -66,22 +66,18 @@
 	if(do_after(user, enthrall_delay, target = user, progress = TRUE))
 		// Success
 		M.visible_message(span_danger("[user]'s waves their hand, a hypnotic charm falling upon [M]..."),
-			"<span style='font-size:23px; font-weight:bold; color:#9933cc; animation: shimmer 2s infinite;'>My mind is unwinding  -- Oh Gods, what magick is this? What is happening? I can't -- think -- I can't...</span>")
+			"<span style='font-size:23px; font-weight:bold; color:#9933cc; animation: shimmer 2s infinite;'>My mind is unwinding  -- Oh Gods, what magick is this? What is happening? I can't -- think -- I can't... Wh..--..?</span>")
 
 		to_chat(user, span_notice("You complete the spell, laying an enchantment upon [M]"))
 
 		// Shimmering purple & red hypnotic message with reduced glow intensity
 		to_chat(M, "<style>@keyframes shimmer { 0% { text-shadow: 0 0 1.5px #9933cc, 0 0 5px #9933cc, 0 0 10px #ff0000; color:#9933cc; } 50% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff3333, 0 0 15px #ffffff; color:#ff0000; } 100% { text-shadow: 0 0 1.5px #9933cc, 0 0 5px #9933cc, 0 0 10px #ff0000; color:#9933cc; } }</style>")
-		to_chat(M, "<span style='font-size:23px; font-weight:bold; animation: shimmer 2s infinite;'>... Oh, I remember now. I must obey [user]. It is my compulsion; to follow their every command...</span>")
+		to_chat(M, "<span style='font-size:23px; font-weight:bold; animation: shimmer 2s infinite;'>... Oh, I remember now. I must obey [user]. It is my compulsion; to follow their every command. I am bound to their will utterly and totally...</span>")
 
 		to_chat(M, "<style>@keyframes shimmer { 0% { text-shadow: 0 0 1.5px #9933cc, 0 0 5px #9933cc, 0 0 10px #ff0000; color:#9933cc; } 50% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff3333, 0 0 15px #ffffff; color:#ff0000; } 100% { text-shadow: 0 0 1.5px #9933cc, 0 0 5px #9933cc, 0 0 10px #ff0000; color:#9933cc; } }</style>")
-		to_chat(M, "<span style='font-size:23px; font-weight:bold; animation: shimmer 2s infinite;'>...  However, my brain is fogged, clouded -- it is hard to think. Recalling any information or locations outside of my immediate surroundings is impossible...</span>")
+		to_chat(M, "<span style='font-size:23px; font-weight:bold; animation: shimmer 2s infinite;'>...  However, my brain is clouded by a fogged veil -- it is hard to think. The nature of my charm has stunted my memory. Recalling any information or locations outside of my immediate surroundings is impossible...</span>")
 
 		playsound(M, 'sound/magic/eora_bless.ogg', 50, TRUE)
-
-		if(M.mind)
-			M.mind.store_memory("I am entralled by means of a magic charm, and I must obey the commands of [user]. I am bound to their will utterly and totally -- a fogged veil upon my mind. The nature of my charm has stunted my memory, and I am incapable of revealing sensitive information (such as the location of hidden bases or treasures.)")
-			M.mind.add_special_person(user, "#CCCCFF")
 
 		M.faction |= "[REF(user)]"
 		M.apply_status_effect(STATUS_EFFECT_INLOVE, user)
